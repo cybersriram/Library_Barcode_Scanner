@@ -1,0 +1,94 @@
+body{
+    margin:0;
+    padding:0;
+    background: #f1f7fd;
+    background-size:cover;
+    background-position:center;
+    font-family:sans-serif;
+    
+}
+.regbox{
+    width: 400px;
+    height: 550px;
+    background: rgb(255, 255, 255, 0.5);
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 90 50px;
+}
+
+.option option{
+  font-size:20px;
+}
+.logo{
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    top:  -50px;
+    left: calc(50% - 180px);
+}   
+p{
+    text-align: center;
+     
+}
+h1{
+    margin; 0;
+    padding: 0 0 20px;
+    text align: center;
+    font-size: 22px;
+    height: 10px;
+    align: center;
+    text-decoration: underline;
+}
+.regbox p{
+    margin: 0;
+    padding; 0;
+    font-weight: bold;
+    height: 80px;
+
+}
+.regbox input{
+    width: 50%;
+    margin-bottom: 25px;
+}
+.login_btn {
+    width: 100%;
+    background:  #12191f !important;
+    color: white !important;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom:1px solid #12191f;
+}
+.textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color:#000;
+    font-size: 18px;
+    width:80%;
+    float: left;
+    margin:0 10px;
+
+}
+.regbox a{
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 20px;
+    color: gray;
+}
+.form-check{
+    margin-right: 300px;
+}

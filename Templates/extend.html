@@ -1,0 +1,17 @@
+{% extends 'index.html'%}
+{% block hello%}
+<form method = "POST" action="register">
+{% csrf_token%}
+<label>ROLL NUMBER</label><br>
+<div class="textbox">
+     <input name = "num" type="number" placeholder="roll number">
+</div><br>
+<label>Student Name</label><br>
+<div class="textbox">
+    <input type="text" placeholder="student name" name="name">
+</div><br>
+<div class="d-flex justify-content-center mt-3 login_container">
+    <button type="submit" name="button" class="btn login_btn">ADD</button>
+</div>
+</form>
+{% endblock%}

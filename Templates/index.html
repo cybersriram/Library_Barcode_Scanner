@@ -1,0 +1,44 @@
+{% load static %}
+<html>
+<head>
+<title>REPORT</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{% static 'css/sty.css' %}">
+<body>
+     
+     <div class="regbox">
+     <img src="{% static 'images/logo.png' %}"  class="logo"><br>
+
+     {% block hello %}
+     <center><h1>RESOURCE REPORT</h1></center> <br>      
+     <form method="POST" action="get">
+          <label>ROLL NUMBER</label><br>
+          {% csrf_token %}
+          
+          <div class="textbox">
+               <input name = "num"type="text" placeholder="roll number" autofocus="autofocus"required>
+          </div>
+         <p></p>
+     </form>
+     <form>
+          <label>From date</label>
+          <input type="date" placeholder="from-date"><br>
+          <label>To date</label>
+          <input type="date" placeholder="from-date">
+          <div class="d-flex justify-content-center mt-3 login_container">
+          <button type="button" name="button" class="btn login_btn">Convert</button>
+          
+          
+     </form>
+</div>
+     <div class="d-flex justify-content-center">
+          <a href="register">Register</a>
+     </div>
+
+     {% endblock %}
+     
+     
+</body>
+</head>
+</html>
