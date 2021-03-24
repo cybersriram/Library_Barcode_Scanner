@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('intime', models.CharField(max_length=20)),
                 ('outtime', models.CharField(max_length=20)),
                 ('toggle', models.CharField(max_length=5)),
-                ('date', models.CharField(max_length=20)),
+                ('date', models.DateField()),
             ],
         ),
     ]
