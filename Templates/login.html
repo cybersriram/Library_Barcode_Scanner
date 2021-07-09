@@ -1,7 +1,17 @@
-{% load static %}
+{% load static%}
 <html>
 <head>
 <title>LIBRARY</title>
+<!-- <style>
+    body{
+   
+   background: linear-gradient(138deg,#9198e5,#e66465);
+   background-size:cover;
+   background-position:center;
+   font-family: 'Montserrat', sans-serif;
+   
+}
+</style> -->
 <!--css-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="{% static 'css/sty.css' %}">
@@ -10,14 +20,7 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-     <script>
-          $( function() {
-          $( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
-          } );
-          $( function() {
-          $( "#datepicker1" ).datepicker({ dateFormat: 'yy-mm-dd' });
-          } );
-          </script>
+     
 <body>
       <!--navbar-->
       <section >
@@ -38,9 +41,7 @@
                <li class="nav-item">
                    <a class="nav-link active" aria-current="page" href="get_details">DETAILS</a>
                </li>
-               <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="logout">LOGOUT</a>
-                </li>
+              
           </div>
           </div>
       </nav>
@@ -49,27 +50,23 @@
      <div class="regbox">
      {% block Content %}
      {% block hello %}
-     <h1>LIBRARY LOGIN</h1> <br> <br>     
-     <form method="POST" action="get">
-          <label>ROLL NUMBER</label><br>
+     <h1>LOGIN</h1> <br> <br>     
+     <form method="POST" action="login">
+          <label>USERNAME</label><br>
           {% csrf_token %}
           
           <div class="textbox">
-               <input name = "num"type="text" placeholder="roll number" autocomplete="off" autofocus="autofocus" required>
+               <input name = "uname" type="text" placeholder="username" autocomplete="off" autofocus="autofocus" required>
           </div>
-         <p> {{display}} </p>
-     </form>
-     <form method="POST" action="convert">
-          {% csrf_token%}
-          <label>FROM DATE</label>&nbsp;&nbsp;
-          <input name="from" type="text" id="datepicker" autocomplete="off" placeholder="from-date"><br>
-          <label>TO DATE</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input name="to" type="text" id="datepicker1" autocomplete="off" placeholder="to-date">
-          <div class="d-flex justify-content-center mt-3 login_container">
-          <button type="submit" name="button" class="btn login_btn">Convert</button>
-          </div>
+          <label>PASSWORD</label><br>
           
+          <div class="textbox">
+               <input name = "pass" type="password" placeholder="password" autocomplete="off" autofocus="autofocus" required>
+          </div><br><br>
+          <button type="submit" name="button" class="btn login_btn">SUBMIT</button>
+       {{error}}
      </form>
+     
 
      
 

@@ -56,7 +56,7 @@ ROOT_URLCONF = 'entry.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'C:\Users\SRI\library_barcode_scanner\Templates'],
+        'DIRS': [r'E:\Python Projects\entry\entry\Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
